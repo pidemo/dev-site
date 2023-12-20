@@ -1438,6 +1438,10 @@ figcaption {
   color: var(--green);
 }
 
+.nav_link:active {
+  color: var(--green);
+}
+
 .nav_link.is-hidden {
   display: none;
 }
