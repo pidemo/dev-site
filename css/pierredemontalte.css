@@ -3418,3 +3418,244 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
+/*
+ * extensions.html only — every rule is scoped under body.page-extensions-landing
+ * so extension UI never affects other pages.
+ */
+.page-extensions-landing .section_hero--extensions .hero_content {
+  grid-row-gap: 3.25rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+  padding-left: clamp(1.25rem, 5vw, 3rem);
+  padding-right: clamp(1.25rem, 5vw, 3rem);
+}
+
+.page-extensions-landing .section_hero--extensions .header_wrapper {
+  padding-bottom: 0;
+}
+
+.page-extensions-landing .section_hero--extensions .header_wrapper > .main-subheading:first-of-type {
+  color: var(--black);
+  margin-bottom: .5rem;
+}
+
+.page-extensions-landing .section_hero--extensions .main-heading {
+  margin-bottom: 4.5rem;
+}
+
+.page-extensions-landing .section_hero--extensions .main-heading .extensions-heading-br {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .page-extensions-landing .section_hero--extensions .main-heading .extensions-heading-br {
+    display: block;
+  }
+}
+
+.page-extensions-landing .hero_extensions {
+  width: 100%;
+  max-width: 100%;
+  margin-top: .5rem;
+  margin-bottom: 2.25rem;
+  padding-left: clamp(0.5rem, 2vw, 1rem);
+  padding-right: clamp(0.5rem, 2vw, 1rem);
+}
+
+.page-extensions-landing .hero_extensions .services_content {
+  width: 100%;
+}
+
+.page-extensions-landing .extensions_list {
+  width: 100%;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  grid-row-gap: 2rem;
+  display: flex;
+}
+
+.page-extensions-landing .extension-card {
+  border: 2px solid var(--black);
+  border-radius: 0 2rem 2rem 2rem;
+  background-color: transparent;
+  box-shadow: none;
+  position: relative;
+  overflow: visible;
+  flex-direction: column;
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
+
+.page-extensions-landing .extension-card_body {
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  display: flex;
+  padding-top: 2.35rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.page-extensions-landing .extension-card_kicker {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: var(--green);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin: 0;
+  padding: .4rem .95rem .42rem;
+  border: 2px solid var(--black);
+  border-radius: 9999px;
+  background-color: var(--black);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .18);
+  font-family: Mona Sans Medium, sans-serif;
+  font-size: .6875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.page-extensions-landing .extension-card_title {
+  color: var(--black);
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: PP Monument Extended, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.page-extensions-landing .extension-card_desc {
+  color: rgba(24, 24, 24, .78);
+  text-align: left;
+  text-transform: none;
+  max-width: 60ch;
+  margin: 0;
+  font-family: Mona Sans Regular, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.page-extensions-landing .extension-card_desc + .extension-card_desc {
+  margin-top: .65rem;
+}
+
+.page-extensions-landing .extension-card_cta-row {
+  grid-column-gap: .65rem;
+  grid-row-gap: .65rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: .5rem;
+  display: flex;
+}
+
+.page-extensions-landing .extension-card_cta {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: .65rem 1rem;
+  font-family: PP Monument Extended, sans-serif;
+  font-size: clamp(.75rem, 2.2vw, .875rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform .2s, background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.page-extensions-landing .extension-card_cta--primary {
+  flex: 3 1 62%;
+  min-width: 11.5rem;
+  border: 2px solid var(--black);
+  background-color: var(--black);
+  color: var(--green);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .22);
+}
+
+.page-extensions-landing .extension-card_cta--primary:hover {
+  background-color: var(--green);
+  color: var(--black);
+  border-color: var(--black);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
+  transform: scale(1.02);
+}
+
+.page-extensions-landing .extension-card_cta--secondary {
+  flex: 0 1 auto;
+  min-width: 0;
+  border: 2px solid var(--black);
+  background-color: transparent;
+  color: var(--black);
+  box-shadow: none;
+}
+
+.page-extensions-landing .extension-card_cta--secondary:hover {
+  background-color: rgba(24, 24, 24, .06);
+  color: var(--black);
+  border-color: var(--black);
+  transform: scale(1.02);
+}
+
+.page-extensions-landing .extension-card_icon {
+  flex: none;
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.page-extensions-landing .extension-card_cta--primary .extension-card_icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.page-extensions-landing .main-wrapper {
+  padding-bottom: clamp(3.5rem, 8vw, 7rem);
+}
+
+@media screen and (max-width: 479px) {
+  .page-extensions-landing .extension-card_kicker {
+    left: -2px;
+    transform: translateY(-50%);
+    font-size: .625rem;
+    padding: .35rem .8rem .37rem;
+  }
+
+  .page-extensions-landing .extension-card_cta-row {
+    flex-wrap: wrap;
+  }
+
+  .page-extensions-landing .extension-card_cta--primary {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .page-extensions-landing .extension-card_cta--secondary {
+    flex: 1 1 auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-extensions-landing .extension-card_cta {
+    white-space: normal;
+    text-align: center;
+  }
+}
